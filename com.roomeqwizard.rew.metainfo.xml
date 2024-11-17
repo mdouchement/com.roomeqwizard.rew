@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.roomeqwizard.rew</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Proprietary</project_license>
+  <name>REW - Room EQ Wizard</name>
+  <summary>REW is free software for room acoustic measurement, loudspeaker measurement and audio device measurement and analysis.</summary>
+  <description>
+    <p>
+      REW is free software for room acoustic measurement, loudspeaker measurement and audio device measurement. The audio measurement and analysis features of REW help you optimise the acoustics of your listening room, studio or home theater and find the best locations for your speakers, subwoofers and listening position. It includes tools for generating audio test signals; measuring SPL and impedance; measuring frequency and impulse responses; measuring distortion; generating phase, group delay and spectral decay plots, waterfalls, spectrograms and energy-time curves; generating real time analyser (RTA) plots; calculating reverberation times; calculating Thiele-Small parameters; determining the frequencies and decay times of modal resonances; displaying equaliser responses and automatically adjusting the settings of parametric equalisers to counter the effects of room modes and adjust responses to match a target curve.
+    </p>
+  </description>
+  <launchable type="desktop-id">com.roomeqwizard.rew.desktop</launchable>
+  <releases>
+    <release version="5.31.3" date="2024-06-25" />
+  </releases>
+  <developer_name>n/a</developer_name>
+  <update_contact>n/a</update_contact>
+  <content_rating type="oars-1.0">
+      <content_attribute id="violence-cartoon">none</content_attribute>
+      <content_attribute id="violence-fantasy">none</content_attribute>
+      <content_attribute id="violence-realistic">none</content_attribute>
+      <content_attribute id="violence-bloodshed">none</content_attribute>
+      <content_attribute id="violence-sexual">none</content_attribute>
+      <content_attribute id="drugs-alcohol">none</content_attribute>
+      <content_attribute id="drugs-narcotics">none</content_attribute>
+      <content_attribute id="drugs-tobacco">none</content_attribute>
+      <content_attribute id="sex-nudity">none</content_attribute>
+      <content_attribute id="sex-themes">none</content_attribute>
+      <content_attribute id="language-profanity">none</content_attribute>
+      <content_attribute id="language-humor">none</content_attribute>
+      <content_attribute id="language-discrimination">none</content_attribute>
+      <content_attribute id="social-chat">none</content_attribute>
+      <content_attribute id="social-info">none</content_attribute>
+      <content_attribute id="social-audio">none</content_attribute>
+      <content_attribute id="social-location">none</content_attribute>
+      <content_attribute id="social-contacts">none</content_attribute>
+      <content_attribute id="money-purchasing">none</content_attribute>
+      <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+</component>

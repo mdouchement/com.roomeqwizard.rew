@@ -1,0 +1,41 @@
+app-id: com.roomeqwizard.rew
+runtime: org.freedesktop.Platform
+runtime-version: "24.08"
+sdk: org.freedesktop.Sdk
+# sdk-extensions:
+#   - org.freedesktop.Sdk.Extension.openjdk17
+command: roomeqwizard
+finish-args:
+  - --share=ipc
+  - --socket=x11
+  # Access to wayland
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --socket=pulseaudio
+  - --share=network
+  - --filesystem=home
+  # Device all for ALSA MIDI access. dri included.
+  - --device=all
+  # Pipewire for JACK
+  - --filesystem=xdg-run/pipewire-0
+  - --metadata=X-DConf=migrate-path=/com/roomeqwizard/rew/
+
+modules:
+  - name: rew
+    buildsystem: simple
+    build-commands:
+      - chmod +x REW_linux.sh
+      - ./REW_linux.sh -q -dir "${FLATPAK_DEST}/rew"
+      - mkdir -p "${FLATPAK_DEST}/bin"
+      - ln -s "${FLATPAK_DEST}/rew/roomeqwizard" "${FLATPAK_DEST}/bin/roomeqwizard"
+    sources:
+      - type: file
+        only-arches:
+          - x86_64
+        dest-filename: REW_linux.sh
+        url: https://www.roomeqwizard.com/installers/REW_linux_AMD64_5_31_3.sh
+        sha256: 213e387b3ff4d7d3e5807550de30b4dee6659672f2b055264017f816830b4533
+      - type: file
+        path: rew.sh
+      - type: file
+        path: com.roomeqwizard.rew.metainfo.xml
